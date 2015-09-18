@@ -37,6 +37,29 @@
       $('button').on('click', function(){
 
         $('div').last().after( '<div>Test me out </div>' );
+        $('div').last().text(tweet.message + tweet.created_at);
+        
       })
 
+   //great. Now that our button does what we want how can we add tweets based
+      //on what the users inputs in the input field?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       });
+
+   
