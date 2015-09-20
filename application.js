@@ -6,15 +6,18 @@
         while(index >= 0){
           var tweet = streams.home[index];
           var $tweet = $('<div></div>');
-          $tweet.text('@' + tweet.user + ': ' + tweet.message+': '+ tweet.created_at);
+          $tweet.html('<a href="#"> @' +tweet.user +'</a>' + ': ' + tweet.message+': '+ tweet.created_at);
+
           $tweet.appendTo($body);
           index -= 1;
+
         }
-
-
+       var $tweet = $tweet.html('<a href="#">' + '@' + tweet.user +'</a>');
+       console.log($tweet);
 
         $('<button>Add Tweet</button>').appendTo($body);
         $('<input type="text">').appendTo($body);
+      
         
 
 
@@ -33,12 +36,14 @@
         //for a button click. 
 
       $('button').on('click', function(){
+        
         var guestUser = randomElement(users);
         $('div').last().after( '<div>Test me out </div>' );
-        $('div').last().text('@'+guestUser+': '+randomMessage() +': '+ tweet.created_at);
-         
-        
+        $('div').last().html('<a href="#">@'+guestUser+': </a>'+randomMessage() +': '+ tweet.created_at); 
+
       })
+
+    
 
    //great. Now that our button does what we want how can we add tweets based
       //on what the users inputs in the input field?
