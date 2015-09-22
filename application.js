@@ -11,7 +11,7 @@
         }
 
 
-        $('<button>Add Tweet</button>').appendTo($body);
+        $('<button>Add Tweet</button>').appendTo('div.fortweets');
         $('<input type="text">').appendTo($body);
       
         
