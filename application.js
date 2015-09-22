@@ -4,15 +4,21 @@
         var index = streams.home.length - 1;
         while(index >= 0){
           var tweet = streams.home[index];
-          var $tweet = $('<div></div>');
+          var $tweet = $('<div class="new"></div>');
           $tweet.html('<a class="username" href="#">@' +tweet.user +'</a>' + ': ' + tweet.message+': '+ tweet.created_at);
           $tweet.appendTo('div.fortweets');
           index -= 1;
         }
 
 
-        $('<button>Add Tweet</button>').appendTo('div.fortweets');
-        $('<input type="text">').appendTo($body);
+        $('<button class="btn btn-default btn-lg">Add Tweet</button>').appendTo('div.fortweets');
+       
+        $('<button class="btn btn-default btn-lg">Clear</button>').appendTo('div.forusers');
+
+        $('div.forusers, button').on('click', function(){
+         $('div.forusers').find('div.new').remove();
+       
+      })
       
         
 
@@ -31,22 +37,31 @@
         //to do this lets create an event handler that listens 
         //for a button click. 
 
-      $('button').on('click', function(){
-        
-        var guestUser = randomElement(users);
-        $('div').last().after( '<div>Test me out </div>' );
-        $('div').last().html('<a href="#">@'+guestUser+': </a>'+randomMessage() +': '+ tweet.created_at); 
+      $('div.fortweets, button').on('click', function(){
+         $('div.fortweets').find('div.new').remove();
 
+          var index = streams.home.length - 1;
+          while(index >= 0){
+          var tweet = streams.home[index];
+          var $tweet = $('<div class="new"></div>');
+          $tweet.html('<a class="username" href="#">@' +tweet.user +'</a>' + ': ' + tweet.message+': '+ tweet.created_at);
+          $tweet.appendTo('div.fortweets');
+          index -= 1;
+        }
+       
       })
 
- 
+ // var guestUser = randomElement(users);
+        //$('div').last().after( '<div>Test me out </div>' );
+        //$('div').last().html('<a href="#">@'+guestUser+': </a>'+randomMessage() +': '+ tweet.created_at); 
+
 
    //great. Now that our button does what we want how can we add tweets based
       //on what the users inputs in the input field?
 
       //ok great now ever thing works almost perfect now we just have to be able to click on a user and only display that users tweets. 
 
-      $('.username').on('click', function(){
+      $('a.username').on('click', function(){
 
         var index = streams.home.length - 1;
         
@@ -61,9 +76,9 @@
             console.log('its a match');
             $(this).css('color', 'red');
           var tweet = streams.home[index];
-          var $tweet = $('<div class="active"></div>');
+          var $tweet = $('<div class="new"></div>');
           $tweet.html('<a class="username" href="#">@' +tweet.user +'</a>' + ': ' + tweet.message+': '+ tweet.created_at);
-          $tweet.appendTo($body);
+          $tweet.appendTo('div.forusers');
         }
           index -= 1;
         }
