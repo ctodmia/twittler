@@ -36,10 +36,74 @@
     <script src="jquery.js"></script>
     <script src="data_generator.js"></script>
   </head>
-  <body>
+  <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+<!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    <i class="fa fa-play-circle"></i>  <span class="light">Twittler</span> For your Mama
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#download">Sign In</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Sign UP</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    
+  <header>
+      <div class="container">
+        <h1>Hello, world!</h1>
+        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+      </div>
+  </header>
+
+<section>
+<div class="container">
+  <div class="row">
+
+    <div class="col-md-6">
+      <div class="fortweets">
+      <h1>This section is for Tweets Streaming</h1>
+    </div>
+
+
+    <div class="col-md-6">
+      
+      <h1>This Section will display each users tweets</h1>
+
+          <a class="twitter-timeline" href="https://twitter.com/cinfinitymedia" data-widget-id="646142880080265216">Tweets by @cinfinitymedia</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+    </div>
+    
 
 
 
+  </div>
+</div>
+</section>
 
 
 

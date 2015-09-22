@@ -9,7 +9,7 @@ body {
     height: 100%;
     font-family: Lora,"Helvetica Neue",Helvetica,Arial,sans-serif;
     color: #fff;
-    background-color: rgba(208, 243, 232, 0.53);
+    background-color: #000;
 }
 
 html {
@@ -146,9 +146,9 @@ a:focus {
     height: auto;
     padding: 100px 0;
     text-align: center;
-    color: #000;
-    background: url(../img/) no-repeat bottom center scroll;
-    background-color: #fff;
+    color: #fff;
+    background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
+    background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
